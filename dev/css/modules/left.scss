@@ -1,0 +1,164 @@
+.left, .right{
+  background-color: $white;
+  box-shadow: 0 0 30px $grey;
+  width: 400px;
+  position: fixed;
+  top: 40px;
+  bottom: 40px;
+  left: 40px;
+  overflow: auto;
+  border-radius: $corner;
+  z-index: 12;
+}
+
+.left{
+
+  .title{
+    font-size: 14px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .block{
+    padding: 30px;
+    background-color: $white;
+
+    &:nth-child(odd){
+      background-color: $__grey;
+    }
+  }
+
+  .current_quest{
+    position: relative;
+
+    .change{
+      @include border_btn($primary);
+    }
+
+    .step{
+      color: $primary;
+      font-weight: 500;
+    }
+
+    .description{
+      width: 225px;
+      height: 70px;
+      overflow: hidden;
+    }
+
+    .complete{
+      @include border_btn($green);
+      position: static;
+    }
+
+    .img{
+      position: absolute;
+      bottom: -30px;
+      right: -10px;
+      width: 130px;
+      height: 135px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url("../images/quests/main_quest_step1.png")
+    }
+  }
+
+  .current_location{
+    position: relative;
+
+    .change{
+      @include border_btn($primary);
+    }
+
+    .type{
+      text-transform: uppercase;
+      color: $grey;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .menu{
+
+      div{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .overview{
+
+      }
+
+      .info{
+
+      }
+    }
+
+    .overview_content{
+      padding-top: 10px;
+      display: none;
+
+      ul{
+        list-style-type: none;
+      }
+
+      .stuff_l{
+        float: left;
+        width: 50%;
+      }
+
+      .stuff_r{
+        float: left;
+      }
+    }
+
+    .info_content{
+      padding-top: 10px;
+
+      ul{
+        list-style-type: none;
+      }
+
+      div{
+        float: left;
+      }
+
+      .info_p{
+        margin-bottom: 15px;
+      }
+
+      .details_l{
+        font-weight: 500;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .current_generator{
+
+    .col{
+      float: left;
+    }
+    .treasure{
+      width: 25%;
+    }
+    .town{
+      width: 30%;
+    }
+    .npc{
+      width: 45%;
+    }
+  }
+
+  .current_music{
+    padding: 0;
+    margin: -30px;
+    max-height: 80px;
+    overflow: hidden;
+  }
+}

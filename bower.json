@@ -1,0 +1,26 @@
+{
+  "name": "bower.json",
+  "description": "dependencies",
+  "main": "",
+  "authors": [
+    "Ken Van Damme <solo244@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/solo244/bower",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "rpg-awesome": "^1.0.0",
+    "font-awesome": "fontawesome#^4.7.0",
+    "malihu-custom-scrollbar-plugin": "^3.1.5"
+  }
+}

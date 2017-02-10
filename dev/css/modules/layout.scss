@@ -1,0 +1,29 @@
+.grid{
+  margin: 0 -2%;
+  background-color: red;
+
+  .col_2{
+    width: 46%;
+    margin: 2%;
+  }
+
+  .grid_item{
+    float: left;
+
+    .grid_item_content{
+      background-color: $white;
+      border-radius: $corner;
+      min-height: 50px;
+      padding: 30px 40px;
+      box-shadow: 0 0 10px $shadow;
+    }
+  }
+}
+
+.clear{
+  &:after{
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}

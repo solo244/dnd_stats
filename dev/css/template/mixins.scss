@@ -1,0 +1,35 @@
+@mixin fontawesome($letter){
+  content: $letter;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0px;
+  text-decoration:none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+@mixin border_btn($color){
+  border: 3px solid $color;
+  border-radius: $circle;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $color;
+  }
+}
+
+@mixin input(){
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $grey_;
+}

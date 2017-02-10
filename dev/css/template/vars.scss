@@ -1,0 +1,41 @@
+// Colors general
+$__grey        : #f3f3f3;
+$_grey         : #CCCCCC;
+$grey          : #999999;
+$grey_         : #666666;
+$grey__        : #333333;
+$white         : #FFFFFF;
+$shadow        : #DDDDDD;
+$black         : #000000;
+
+// Colors specific
+$primary       : #7460ee;
+$_primary      : #f0eefc;
+$secondary     : #90a4ae;
+$_secondary    : #f4f8f9;
+$blue          : #11a0f8;
+$green         : #66cd2e;
+$yellow        : #ffbb44;
+$turqiose      : #0097a7;
+$red           : red;
+
+// Extra colors
+$shadow        : #e9edee;
+
+// General
+$corner        : 10px;
+$circle        : 50%;
+
+// Font(s)
+$font          : "Rubik";
+$size          : 13px;
+$font-weight   : normal;
+$line-height   : 18px;
+
+// Media queries
+$xs            : "(min-width: 0px) and (max-width: 499px)";
+$s             : "(min-width: 500px) and (max-width: 767px)";
+$m             : "(min-width: 768px) and (max-width: 989px)";
+$l             : "(min-width: 990px) and (max-width: 1299px)";
+$xl            : "(min-width: 1300px) and (max-width: 1699px)";
+$xxl           : "(min-width: 1700px)";

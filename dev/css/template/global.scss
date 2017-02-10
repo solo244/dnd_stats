@@ -1,0 +1,54 @@
+body{
+  background-color: $__grey;
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $grey_;
+}
+
+.container{
+  max-width: 900px;
+  margin: 110px auto;
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+p{
+
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.clock{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.top-saving, .top-saved{
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
