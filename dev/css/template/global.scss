@@ -39,16 +39,3 @@ a{
 ul{
   list-style-type: none;
 }
-
-.clock{
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.top-saving, .top-saved{
-  position: fixed;
-  top: 5px;
-  right: 5px;
-}
