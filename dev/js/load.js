@@ -10,7 +10,9 @@
       player5;
 
   var $body = $("body"),
-      $stats_melee = $body.find(".stat-attacks");
+      $stats_melee = $body.find(".stat-attacks"),
+      $bars = $body.find(".bars"),
+      $bar = $bars.find(".bar");
 
   /*
    * Init
@@ -22,11 +24,24 @@
    */
   function updateStats(p1, p2, p3, p4, p5){
     // Melee
-    $stats_melee.find(".p1").html(p1.attacks);
-    $stats_melee.find(".p2").html(p2.attacks);
-    $stats_melee.find(".p3").html(p3.attacks);
-    $stats_melee.find(".p4").html(p4.attacks);
-    $stats_melee.find(".p5").html(p5.attacks);
+    $stats_melee.find(".p1").html("<span>" + p1.attacks + "</span>");
+    $stats_melee.find(".p2").html("<span>" + p2.attacks + "</span>");
+    $stats_melee.find(".p3").html("<span>" + p3.attacks + "</span>");
+    $stats_melee.find(".p4").html("<span>" + p4.attacks + "</span>");
+    $stats_melee.find(".p5").html("<span>" + p5.attacks + "</span>");
+
+    scale();
+  }
+
+  function scale(e){
+    $bar.each(function(){
+      var $this = $(this),
+          value = parseInt($this.find("span").html()),
+          percent = parseInt($this.parent().parent().find(".max").text()),
+          new_value = value / percent * 200;
+
+      $this.height(new_value);
+    });
   }
 
   function load(e){

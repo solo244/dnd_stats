@@ -43,7 +43,15 @@
           display: block;
           width: 100%;
           bottom: 0;
-          height: 60px;
+          height: 0px;
+
+          span {
+            top: -13px;
+            position: absolute;
+            text-align: center;
+            display: block;
+            width: 100%;
+          }
         }
 
         .p1 { background-color: lighten($red, 30%); }
