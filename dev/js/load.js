@@ -11,6 +11,16 @@
 
   var $body = $("body"),
       $stats_melee = $body.find(".stat-attacks"),
+      $stats_spells = $body.find(".stat-spells"),
+      $stats_hits = $body.find(".stat-hits"),
+      $stats_misses = $body.find(".stat-misses"),
+      $stats_accuracy = $body.find(".stat-accuracy"),
+      $stats_blocked = $body.find(".stat-blocked"),
+      $stats_healed = $body.find(".stat-healed"),
+      $stats_damage = $body.find(".stat-damage"),
+      $stats_received = $body.find(".stat-received"),
+      $stats_roll20 = $body.find(".stat-roll20"),
+      $stats_roll1 = $body.find(".stat-roll1"),
       $bars = $body.find(".bars"),
       $bar = $bars.find(".bar");
 
@@ -29,6 +39,66 @@
     $stats_melee.find(".p3").html("<span>" + p3.attacks + "</span>");
     $stats_melee.find(".p4").html("<span>" + p4.attacks + "</span>");
     $stats_melee.find(".p5").html("<span>" + p5.attacks + "</span>");
+    // Spells
+    $stats_spells.find(".p1").html("<span>" + p1.spells + "</span>");
+    $stats_spells.find(".p2").html("<span>" + p2.spells + "</span>");
+    $stats_spells.find(".p3").html("<span>" + p3.spells + "</span>");
+    $stats_spells.find(".p4").html("<span>" + p4.spells + "</span>");
+    $stats_spells.find(".p5").html("<span>" + p5.spells + "</span>");
+    // Hits
+    $stats_hits.find(".p1").html("<span>" + p1.hits + "</span>");
+    $stats_hits.find(".p2").html("<span>" + p2.hits + "</span>");
+    $stats_hits.find(".p3").html("<span>" + p3.hits + "</span>");
+    $stats_hits.find(".p4").html("<span>" + p4.hits + "</span>");
+    $stats_hits.find(".p5").html("<span>" + p5.hits + "</span>");
+    // Misses
+    $stats_misses.find(".p1").html("<span>" + p1.misses + "</span>");
+    $stats_misses.find(".p2").html("<span>" + p2.misses + "</span>");
+    $stats_misses.find(".p3").html("<span>" + p3.misses + "</span>");
+    $stats_misses.find(".p4").html("<span>" + p4.misses + "</span>");
+    $stats_misses.find(".p5").html("<span>" + p5.misses + "</span>");
+    // Accuracy
+    $stats_accuracy.find(".p1").html("<span>" + p1.attacks + "</span>");
+    $stats_accuracy.find(".p2").html("<span>" + p2.attacks + "</span>");
+    $stats_accuracy.find(".p3").html("<span>" + p3.attacks + "</span>");
+    $stats_accuracy.find(".p4").html("<span>" + p4.attacks + "</span>");
+    $stats_accuracy.find(".p5").html("<span>" + p5.attacks + "</span>");
+    // Blocked
+    $stats_blocked.find(".p1").html("<span>" + p1.blocked + "</span>");
+    $stats_blocked.find(".p2").html("<span>" + p2.blocked + "</span>");
+    $stats_blocked.find(".p3").html("<span>" + p3.blocked + "</span>");
+    $stats_blocked.find(".p4").html("<span>" + p4.blocked + "</span>");
+    $stats_blocked.find(".p5").html("<span>" + p5.blocked + "</span>");
+    // Healed
+    $stats_healed.find(".p1").html("<span>" + p1.healed + "</span>");
+    $stats_healed.find(".p2").html("<span>" + p2.healed + "</span>");
+    $stats_healed.find(".p3").html("<span>" + p3.healed + "</span>");
+    $stats_healed.find(".p4").html("<span>" + p4.healed + "</span>");
+    $stats_healed.find(".p5").html("<span>" + p5.healed + "</span>");
+    // Damage Done
+    $stats_damage.find(".p1").html("<span>" + p1.damagedone + "</span>");
+    $stats_damage.find(".p2").html("<span>" + p2.damagedone + "</span>");
+    $stats_damage.find(".p3").html("<span>" + p3.damagedone + "</span>");
+    $stats_damage.find(".p4").html("<span>" + p4.damagedone + "</span>");
+    $stats_damage.find(".p5").html("<span>" + p5.damagedone + "</span>");
+    // Damage Received
+    $stats_received.find(".p1").html("<span>" + p1.damagereceived + "</span>");
+    $stats_received.find(".p2").html("<span>" + p2.damagereceived + "</span>");
+    $stats_received.find(".p3").html("<span>" + p3.damagereceived + "</span>");
+    $stats_received.find(".p4").html("<span>" + p4.damagereceived + "</span>");
+    $stats_received.find(".p5").html("<span>" + p5.damagereceived + "</span>");
+    // Roll20
+    $stats_roll20.find(".p1").html("<span>" + p1.roll20 + "</span>");
+    $stats_roll20.find(".p2").html("<span>" + p2.roll20 + "</span>");
+    $stats_roll20.find(".p3").html("<span>" + p3.roll20 + "</span>");
+    $stats_roll20.find(".p4").html("<span>" + p4.roll20 + "</span>");
+    $stats_roll20.find(".p5").html("<span>" + p5.roll20 + "</span>");
+    // Roll1
+    $stats_roll1.find(".p1").html("<span>" + p1.roll1 + "</span>");
+    $stats_roll1.find(".p2").html("<span>" + p2.roll1 + "</span>");
+    $stats_roll1.find(".p3").html("<span>" + p3.roll1 + "</span>");
+    $stats_roll1.find(".p4").html("<span>" + p4.roll1 + "</span>");
+    $stats_roll1.find(".p5").html("<span>" + p5.roll1 + "</span>");
 
     scale();
   }
