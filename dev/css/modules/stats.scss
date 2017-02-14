@@ -19,6 +19,10 @@ h1 {
     box-shadow: 0 0 40px $_grey;
     float: left;
 
+    &:hover {
+      box-shadow: 0 0 40px $grey;
+    }
+
     @media screen and (min-width: 760px) {
       width: 48%;
     }
@@ -45,8 +49,8 @@ h1 {
 
       .bars {
         float: left;
-        width: 18%;
-        margin: 1%;
+        width: 16%;
+        margin: 2%;
         height: 200px;
         text-align: center;
         background-color: $__grey;
@@ -68,11 +72,11 @@ h1 {
           }
         }
 
-        .p1 { background-color: lighten($red, 30%); }
-        .p2 { background-color: lighten($blue, 30%); }
-        .p3 { background-color: lighten($green, 30%); }
-        .p4 { background-color: lighten($yellow, 10%); }
-        .p5 { background-color: lighten($turqiose, 30%); }
+        .p1 { background-color: lighten($yellow, 7%); }
+        .p2 { background-color: lighten($blue, 15%); }
+        .p3 { background-color: lighten($primary, 20%); }
+        .p4 { background-color: lighten($green, 10%); }
+        .p5 { background-color: lighten($red, 20%); }
       }
     }
 

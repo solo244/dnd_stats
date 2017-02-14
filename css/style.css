@@ -4837,6 +4837,8 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 40px #CCCCCC;
     float: left; }
+    .stats .stat:hover {
+      box-shadow: 0 0 40px #999999; }
     @media screen and (min-width: 760px) {
       .stats .stat {
         width: 48%; } }
@@ -4857,8 +4859,8 @@ h1 {
       height: 280px; }
       .stats .stat .chart .bars {
         float: left;
-        width: 18%;
-        margin: 1%;
+        width: 16%;
+        margin: 2%;
         height: 200px;
         text-align: center;
         background-color: #f3f3f3;
@@ -4876,15 +4878,15 @@ h1 {
             display: block;
             width: 100%; }
         .stats .stat .chart .bars .p1 {
-          background-color: #ff9999; }
+          background-color: #ffc868; }
         .stats .stat .chart .bars .p2 {
-          background-color: #a6dbfc; }
+          background-color: #5bbefa; }
         .stats .stat .chart .bars .p3 {
-          background-color: #c0eca8; }
+          background-color: #c5bcf8; }
         .stats .stat .chart .bars .p4 {
-          background-color: #ffce77; }
+          background-color: #84d955; }
         .stats .stat .chart .bars .p5 {
-          background-color: #41edff; }
+          background-color: #ff6666; }
     .stats .stat .max {
       display: none; }
     .stats .stat .key {
