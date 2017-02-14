@@ -1,5 +1,8 @@
 # D&D Stats
 
+## Preview
+- It's online! View it at: [Github pages](https://solo244.github.io/dnd_stats/)
+
 ## About
 Webdesigner, webdeveloper, teacher, gamer, moron, realist, procrastinator, fast talker, nerd, distracted by pretty colors. I think thats by far the best description I can give you.
 
