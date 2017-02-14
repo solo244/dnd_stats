@@ -32,28 +32,28 @@ module.exports = function(grunt) {
         src: [
           'dev/js/*.js'
         ],
-        dest: 'build/js/main.js',
+        dest: 'js/main.js',
       },
       vendor: {
         src: [
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
         ],
-        dest: 'build/js/vendor.js',
+        dest: 'js/vendor.js',
       },
       combo: {
         src: [
-          'build/js/vendor.js',
-          'build/js/main.js'
+          'js/vendor.js',
+          'js/main.js'
         ],
-        dest: 'build/js/app.js',
+        dest: 'js/app.js',
       }
     },
 
     uglify: {
       build: {
-        src: 'build/js/app.js',
-        dest: 'build/js/app.min.js'
+        src: 'js/app.js',
+        dest: 'js/app.min.js'
       },
     },
 
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'build/css/style.css': 'dev/css/main.scss'
+          'css/style.css': 'dev/css/main.scss'
         }
       }
     },
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'build/css/style.css'
+        src: 'css/style.css'
       }
     },
 
@@ -87,19 +87,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'build/css/style.min.css': ['build/css/style.css']
-        }
-      }
-    },
-
-    php: {
-      dist: {
-        options: {
-          hostname: '127.0.0.1',
-          port: 9000,
-          base: './build', // Project root
-          keepalive: true,
-          open: false
+          'css/style.min.css': ['css/style.css']
         }
       }
     },
@@ -108,15 +96,15 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            'build/css/*.css',
-            'build/**/*.html',
-            'build/js/*.js'
+            'css/*.css',
+            '**/*.html',
+            'js/*.js'
           ]
         },
         options: {
           watchTask: true,
           server: {
-            baseDir: "./build"
+            baseDir: "./"
           },
           startPath: "/"
         }
@@ -135,7 +123,7 @@ module.exports = function(grunt) {
         files: [{
           cwd: "dev/content",
           src: ["**/*.jade", "!_template/**/*.jade"],
-          dest: "build",
+          dest: "",
           expand: true,
           ext: ".html"
         }],
@@ -148,7 +136,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'dev/images/',
           src: '**',
-          dest: 'build/images/'
+          dest: 'images/'
         }]
       },
       fonts: {
@@ -156,57 +144,18 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'bower_components/rpg-awesome/fonts/',
           src: '**',
-          dest: 'build/css/fonts/'
+          dest: 'css/fonts/'
         }]
       },
-      ftp: {
-        files: [{
-          expand: true,
-          cwd: 'build/',
-          src: '**',
-          dest: 'dist/'
-        }]
-      }
     },
 
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'build/images/',
+          cwd: 'images/',
           src: ['**/*.{png,jpg,gif,ico}'],
-          dest: 'build/images/'
-        }]
-      }
-    },
-
-    'string-replace': {
-      inline: {
-        files: {
-          'dist/': 'dist/**/*.html',
-        },
-        options: {
-          replacements: [
-            {
-              pattern: '<link rel="stylesheet" type="text/css" href="' + root_project_name + '/build/css/style.min.css">',
-              replacement: '<link rel="stylesheet" type="text/css" href="' + server + '/css/style.min.css">'
-            },
-            {
-              pattern: '<script src="' + root_project_name + '/build/js/main.min.js"></script>',
-              replacement: '<script src="' + server + '/js/app.min.js"></script>'
-            }
-          ]
-        }
-      }
-    },
-
-    replace: {
-      another_example: {
-        src: ['dist/**/*.html'],
-        overwrite: true,
-        replacements: [{
-          from: 'href="' + root_project_name + '/build',
-          to: 'href="' + server
+          dest: 'images/'
         }]
       }
     },
@@ -273,7 +222,4 @@ module.exports = function(grunt) {
   grunt.task.run('notify_hooks');
 
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'postcss', 'cssmin', 'jade', 'copy:fonts', 'copy:images', 'browserSync', 'watch']);
-  //grunt.registerTask('php', ['php']);
-  grunt.registerTask('dist', ['concat', 'uglify', 'sass', 'postcss', 'cssmin', 'jade', 'copy:fonts', 'copy:images', 'imagemin', 'copy:ftp', 'string-replace', 'replace']);
-  grunt.registerTask('ftp', ['copy:ftp', 'string-replace', 'replace', 'ftp-deploy']);
 };
