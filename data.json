@@ -18,7 +18,10 @@
     "damagedone": "46",
     "damagereceived": "0",
     "roll20": "1",
-    "roll1": "4"
+    "roll1": "4",
+    "kills": "1",
+    "downs": "0",
+    "deaths": "0"
   },
   "player2": {
     "name": "Tharlo Galanodel - Elf",
@@ -39,7 +42,10 @@
     "damagedone": "42",
     "damagereceived": "19",
     "roll20": "3",
-    "roll1": "0"
+    "roll1": "0",
+    "kills": "2",
+    "downs": "0",
+    "deaths": "0"
   },
   "player3": {
     "name": "Tom The Destroyer - Gnome",
@@ -60,7 +66,10 @@
     "damagedone": "45",
     "damagereceived": "22",
     "roll20": "3",
-    "roll1": "0"
+    "roll1": "0",
+    "kills": "3",
+    "downs": "1",
+    "deaths": "0"
   },
   "player4": {
     "name": "Macros - Half Orc",
@@ -81,7 +90,10 @@
     "damagedone": "75",
     "damagereceived": "14",
     "roll20": "2",
-    "roll1": "0"
+    "roll1": "0",
+    "kills": "3",
+    "downs": "0",
+    "deaths": "0"
   },
   "player5": {
     "name": "Amafrey Stormwind - Human",
@@ -102,6 +114,9 @@
     "damagedone": "23",
     "damagereceived": "20",
     "roll20": "4",
-    "roll1": "3"
+    "roll1": "3",
+    "kills": "2",
+    "downs": "1",
+    "deaths": "1"
   }
 }

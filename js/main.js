@@ -19,6 +19,9 @@
       $stats_healed = $body.find(".stat-healed"),
       $stats_damage = $body.find(".stat-damage"),
       $stats_received = $body.find(".stat-received"),
+      $stats_kills = $body.find(".stat-kills"),
+      $stats_downs = $body.find(".stat-downs"),
+      $stats_deaths = $body.find(".stat-deaths"),
       $stats_roll20 = $body.find(".stat-roll20"),
       $stats_roll1 = $body.find(".stat-roll1"),
       $bars = $body.find(".bars"),
@@ -87,6 +90,24 @@
     $stats_received.find(".p3").html("<span>" + p3.damagereceived + "</span>");
     $stats_received.find(".p4").html("<span>" + p4.damagereceived + "</span>");
     $stats_received.find(".p5").html("<span>" + p5.damagereceived + "</span>");
+    // Kills Made
+    $stats_kills.find(".p1").html("<span>" + p1.kills + "</span>");
+    $stats_kills.find(".p2").html("<span>" + p2.kills + "</span>");
+    $stats_kills.find(".p3").html("<span>" + p3.kills + "</span>");
+    $stats_kills.find(".p4").html("<span>" + p4.kills + "</span>");
+    $stats_kills.find(".p5").html("<span>" + p5.kills + "</span>");
+    // Times Downed
+    $stats_downs.find(".p1").html("<span>" + p1.downs + "</span>");
+    $stats_downs.find(".p2").html("<span>" + p2.downs + "</span>");
+    $stats_downs.find(".p3").html("<span>" + p3.downs + "</span>");
+    $stats_downs.find(".p4").html("<span>" + p4.downs + "</span>");
+    $stats_downs.find(".p5").html("<span>" + p5.downs + "</span>");
+    // Deaths
+    $stats_deaths.find(".p1").html("<span>" + p1.deaths + "</span>");
+    $stats_deaths.find(".p2").html("<span>" + p2.deaths + "</span>");
+    $stats_deaths.find(".p3").html("<span>" + p3.deaths + "</span>");
+    $stats_deaths.find(".p4").html("<span>" + p4.deaths + "</span>");
+    $stats_deaths.find(".p5").html("<span>" + p5.deaths + "</span>");
     // Roll20
     $stats_roll20.find(".p1").html("<span>" + p1.roll20 + "</span>");
     $stats_roll20.find(".p2").html("<span>" + p2.roll20 + "</span>");
@@ -134,6 +155,9 @@
         "healed" : data.player1.healed,
         "damagedone" : data.player1.damagedone,
         "damagereceived" : data.player1.damagereceived,
+        "kills" : data.player1.kills,
+        "downs" : data.player1.downs,
+        "deaths" : data.player1.deaths,
         "roll20" : data.player1.roll20,
         "roll1" : data.player1.roll1
       };
@@ -155,6 +179,9 @@
         "healed" : data.player2.healed,
         "damagedone" : data.player2.damagedone,
         "damagereceived" : data.player2.damagereceived,
+        "kills" : data.player2.kills,
+        "downs" : data.player2.downs,
+        "deaths" : data.player2.deaths,
         "roll20" : data.player2.roll20,
         "roll1" : data.player2.roll1
       };
@@ -176,6 +203,9 @@
         "healed" : data.player3.healed,
         "damagedone" : data.player3.damagedone,
         "damagereceived" : data.player3.damagereceived,
+        "kills" : data.player3.kills,
+        "downs" : data.player3.downs,
+        "deaths" : data.player3.deaths,
         "roll20" : data.player3.roll20,
         "roll1" : data.player3.roll1
       };
@@ -197,6 +227,9 @@
         "healed" : data.player4.healed,
         "damagedone" : data.player4.damagedone,
         "damagereceived" : data.player4.damagereceived,
+        "kills" : data.player4.kills,
+        "downs" : data.player4.downs,
+        "deaths" : data.player4.deaths,
         "roll20" : data.player4.roll20,
         "roll1" : data.player4.roll1
       };
@@ -218,6 +251,9 @@
         "healed" : data.player5.healed,
         "damagedone" : data.player5.damagedone,
         "damagereceived" : data.player5.damagereceived,
+        "kills" : data.player5.kills,
+        "downs" : data.player5.downs,
+        "deaths" : data.player5.deaths,
         "roll20" : data.player5.roll20,
         "roll1" : data.player5.roll1
       };
