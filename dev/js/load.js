@@ -36,6 +36,12 @@
    * Loading
    */
   function updateStats(p1, p2, p3, p4, p5){
+    // Calc Accuracy
+    var acc_p1 = Math.floor(parseInt(p1.hits) / (parseInt(p1.attacks) + parseInt(p1.spells)) * 100);
+    var acc_p2 = Math.floor(parseInt(p2.hits) / (parseInt(p2.attacks) + parseInt(p2.spells)) * 100);
+    var acc_p3 = Math.floor(parseInt(p3.hits) / (parseInt(p3.attacks) + parseInt(p3.spells)) * 100);
+    var acc_p4 = Math.floor(parseInt(p4.hits) / (parseInt(p4.attacks) + parseInt(p4.spells)) * 100);
+    var acc_p5 = Math.floor(parseInt(p5.hits) / (parseInt(p5.attacks) + parseInt(p5.spells)) * 100);
     // Melee
     $stats_melee.find(".p1").html("<span>" + p1.attacks + "</span>");
     $stats_melee.find(".p2").html("<span>" + p2.attacks + "</span>");
@@ -61,11 +67,11 @@
     $stats_misses.find(".p4").html("<span>" + p4.misses + "</span>");
     $stats_misses.find(".p5").html("<span>" + p5.misses + "</span>");
     // Accuracy
-    $stats_accuracy.find(".p1").html("<span>" + p1.attacks + "</span>");
-    $stats_accuracy.find(".p2").html("<span>" + p2.attacks + "</span>");
-    $stats_accuracy.find(".p3").html("<span>" + p3.attacks + "</span>");
-    $stats_accuracy.find(".p4").html("<span>" + p4.attacks + "</span>");
-    $stats_accuracy.find(".p5").html("<span>" + p5.attacks + "</span>");
+    $stats_accuracy.find(".p1").html("<span>" + acc_p1 + "%</span>");
+    $stats_accuracy.find(".p2").html("<span>" + acc_p2 + "%</span>");
+    $stats_accuracy.find(".p3").html("<span>" + acc_p3 + "%</span>");
+    $stats_accuracy.find(".p4").html("<span>" + acc_p4 + "%</span>");
+    $stats_accuracy.find(".p5").html("<span>" + acc_p5 + "%</span>");
     // Blocked
     $stats_blocked.find(".p1").html("<span>" + p1.blocked + "</span>");
     $stats_blocked.find(".p2").html("<span>" + p2.blocked + "</span>");
