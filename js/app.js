@@ -137,7 +137,37 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
     $stats_roll1.find(".p4").html("<span>" + p4.roll1 + "</span>");
     $stats_roll1.find(".p5").html("<span>" + p5.roll1 + "</span>");
 
+    calculateMaxes();
     scale();
+  }
+
+  function calculateMaxes(e){
+    findHighest($stats_melee);
+    findHighest($stats_spells);
+    findHighest($stats_hits);
+    findHighest($stats_misses);
+    findHighest($stats_accuracy);
+    findHighest($stats_blocked);
+    findHighest($stats_healed);
+    findHighest($stats_damage);
+    findHighest($stats_received);
+    findHighest($stats_kills);
+    findHighest($stats_downs);
+    findHighest($stats_deaths);
+    findHighest($stats_roll20);
+    findHighest($stats_roll1);
+  }
+
+  function findHighest(stat){
+    var highest = 0;
+    var setmax = 0;
+    stat.find(".bar span").each(function() {
+      var $this = $(this),
+          $val = parseFloat($this.html());
+      highest = Math.max(highest, $val);
+      setmax = highest + (highest / 100 * 20);
+    });
+    stat.find(".max").html(setmax);
   }
 
   function scale(e){
