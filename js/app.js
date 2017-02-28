@@ -304,7 +304,19 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
         "roll1" : data.player5.roll1
       };
     }).done(function(){
+      var first = setInterval(step1, 1000);
+      var sec = setInterval(step2, 1500);
+
+      function step1() {
+        $("body").addClass("active");
+        $(".preloader").addClass("hide-preloader");
+        $("h1").addClass("active");
+      }
+
+      function step2() {
+        $(".stat").addClass("show");
         updateStats(player1, player2, player3, player4, player5);
+      }
     });
   }
 

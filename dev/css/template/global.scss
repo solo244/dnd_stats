@@ -5,6 +5,46 @@ body{
   line-height: $line-height;
   font-weight: $font-weight;
   color: $grey_;
+  background: $_primary url(/images/bg.jpg) no-repeat center fixed;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    background-color: $_primary;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  &.active {
+
+    &:after {
+      opacity: 0.9;
+    }
+  }
+}
+
+.preloader {
+  background: $white url(/images/preloader.gif) no-repeat center;
+  background-size: 64px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide-preloader {
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
 }
 
 .container{
