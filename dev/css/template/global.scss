@@ -5,7 +5,7 @@ body{
   line-height: $line-height;
   font-weight: $font-weight;
   color: $grey_;
-  background: $_primary url(/images/bg.jpg) no-repeat center fixed;
+  background: $_primary url(images/bg.jpg) no-repeat center fixed;
   background-size: cover;
 
   &:after {
@@ -30,7 +30,7 @@ body{
 }
 
 .preloader {
-  background: $white url(/images/preloader.gif) no-repeat center;
+  background: $white url(images/preloader.gif) no-repeat center;
   background-size: 64px;
   width: 100px;
   height: 100px;
