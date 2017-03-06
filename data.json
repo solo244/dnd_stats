@@ -1,11 +1,11 @@
 {
   "player1": {
     "name": "Shen - Half Elf",
-    "level": 2,
+    "level": 4,
     "class": "Monk",
     "image": "images/players/player1.png",
     "health": "18",
-    "maxhealth": 24,
+    "maxhealth": 28,
     "money": "9",
     "initiative": -3,
     "spellslots": "0",
@@ -25,7 +25,7 @@
   },
   "player2": {
     "name": "Tharlo Galanodel - Elf",
-    "level": 2,
+    "level": 4,
     "class": "Paladin",
     "image": "images/players/player2.png",
     "health": "21",
@@ -49,11 +49,11 @@
   },
   "player3": {
     "name": "Tom The Destroyer - Gnome",
-    "level": 2,
+    "level": 3,
     "class": "Wizard",
     "image": "images/players/player3.png",
     "health": "13",
-    "maxhealth": 13,
+    "maxhealth": 20,
     "money": "42",
     "initiative": 0,
     "spellslots": "4",
@@ -73,7 +73,7 @@
   },
   "player4": {
     "name": "Macros - Half Orc",
-    "level": 2,
+    "level": 4,
     "class": "Warlock",
     "image": "images/players/player4.png",
     "health": "18",
@@ -97,7 +97,7 @@
   },
   "player5": {
     "name": "Amafrey Stormwind - Human",
-    "level": 2,
+    "level": 4,
     "class": "Barbarian",
     "image": "images/players/player5.png",
     "health": "25",
