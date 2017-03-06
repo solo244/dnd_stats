@@ -68,7 +68,7 @@
     "roll20": "3",
     "roll1": "1",
     "kills": "3",
-    "downs": "1",
+    "downs": "3",
     "deaths": "0"
   },
   "player4": {
@@ -106,7 +106,7 @@
     "initiative": -1,
     "spellslots": "0",
     "attacks": "16",
-    "spells": "1",
+    "spells": "",
     "hits": "10",
     "misses": "6",
     "blocked": "4",
