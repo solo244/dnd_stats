@@ -4860,9 +4860,15 @@ h1 {
     color: #7460ee; }
 
 .stats {
-  padding: 50px;
+  padding: 10px;
   max-width: 1600px;
   margin: 0 auto; }
+  @media screen and (min-width: 760px) {
+    .stats {
+      padding: 20px; } }
+  @media screen and (min-width: 1200px) {
+    .stats {
+      padding: 30px; } }
   .stats .stat {
     width: 98%;
     margin: 1%;
@@ -4894,8 +4900,8 @@ h1 {
       height: 280px; }
       .stats .stat .chart .bars {
         float: left;
-        width: 16%;
-        margin: 2%;
+        width: 14%;
+        margin: 1.3%;
         height: 200px;
         text-align: center;
         background-color: #f3f3f3;
@@ -4922,6 +4928,8 @@ h1 {
           background-color: #84d955; }
         .stats .stat .chart .bars .p5 {
           background-color: #ff6666; }
+        .stats .stat .chart .bars .p6 {
+          background-color: #0ee8ff; }
     .stats .stat .max {
       display: none; }
     .stats .stat .key {

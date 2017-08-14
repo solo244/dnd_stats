@@ -7,7 +7,8 @@
       player2,
       player3,
       player4,
-      player5;
+      player5,
+      player6;
 
   var $body = $("body"),
       $stats_melee = $body.find(".stat-attacks"),
@@ -35,97 +36,112 @@
   /*
    * Loading
    */
-  function updateStats(p1, p2, p3, p4, p5){
+  function updateStats(p1, p2, p3, p4, p5, p6){
     // Calc Accuracy
     var acc_p1 = Math.floor(parseInt(p1.hits) / (parseInt(p1.attacks) + parseInt(p1.spells)) * 100);
     var acc_p2 = Math.floor(parseInt(p2.hits) / (parseInt(p2.attacks) + parseInt(p2.spells)) * 100);
     var acc_p3 = Math.floor(parseInt(p3.hits) / (parseInt(p3.attacks) + parseInt(p3.spells)) * 100);
     var acc_p4 = Math.floor(parseInt(p4.hits) / (parseInt(p4.attacks) + parseInt(p4.spells)) * 100);
     var acc_p5 = Math.floor(parseInt(p5.hits) / (parseInt(p5.attacks) + parseInt(p5.spells)) * 100);
+    var acc_p6 = Math.floor(parseInt(p6.hits) / (parseInt(p6.attacks) + parseInt(p6.spells)) * 100);
     // Melee
     $stats_melee.find(".p1").html("<span>" + p1.attacks + "</span>");
     $stats_melee.find(".p2").html("<span>" + p2.attacks + "</span>");
     $stats_melee.find(".p3").html("<span>" + p3.attacks + "</span>");
     $stats_melee.find(".p4").html("<span>" + p4.attacks + "</span>");
     $stats_melee.find(".p5").html("<span>" + p5.attacks + "</span>");
+    $stats_melee.find(".p6").html("<span>" + p6.attacks + "</span>");
     // Spells
     $stats_spells.find(".p1").html("<span>" + p1.spells + "</span>");
     $stats_spells.find(".p2").html("<span>" + p2.spells + "</span>");
     $stats_spells.find(".p3").html("<span>" + p3.spells + "</span>");
     $stats_spells.find(".p4").html("<span>" + p4.spells + "</span>");
     $stats_spells.find(".p5").html("<span>" + p5.spells + "</span>");
+    $stats_spells.find(".p6").html("<span>" + p6.spells + "</span>");
     // Hits
     $stats_hits.find(".p1").html("<span>" + p1.hits + "</span>");
     $stats_hits.find(".p2").html("<span>" + p2.hits + "</span>");
     $stats_hits.find(".p3").html("<span>" + p3.hits + "</span>");
     $stats_hits.find(".p4").html("<span>" + p4.hits + "</span>");
     $stats_hits.find(".p5").html("<span>" + p5.hits + "</span>");
+    $stats_hits.find(".p6").html("<span>" + p6.hits + "</span>");
     // Misses
     $stats_misses.find(".p1").html("<span>" + p1.misses + "</span>");
     $stats_misses.find(".p2").html("<span>" + p2.misses + "</span>");
     $stats_misses.find(".p3").html("<span>" + p3.misses + "</span>");
     $stats_misses.find(".p4").html("<span>" + p4.misses + "</span>");
     $stats_misses.find(".p5").html("<span>" + p5.misses + "</span>");
+    $stats_misses.find(".p6").html("<span>" + p6.misses + "</span>");
     // Accuracy
     $stats_accuracy.find(".p1").html("<span>" + acc_p1 + "%</span>");
     $stats_accuracy.find(".p2").html("<span>" + acc_p2 + "%</span>");
     $stats_accuracy.find(".p3").html("<span>" + acc_p3 + "%</span>");
     $stats_accuracy.find(".p4").html("<span>" + acc_p4 + "%</span>");
     $stats_accuracy.find(".p5").html("<span>" + acc_p5 + "%</span>");
+    $stats_accuracy.find(".p6").html("<span>" + acc_p6 + "%</span>");
     // Blocked
     $stats_blocked.find(".p1").html("<span>" + p1.blocked + "</span>");
     $stats_blocked.find(".p2").html("<span>" + p2.blocked + "</span>");
     $stats_blocked.find(".p3").html("<span>" + p3.blocked + "</span>");
     $stats_blocked.find(".p4").html("<span>" + p4.blocked + "</span>");
     $stats_blocked.find(".p5").html("<span>" + p5.blocked + "</span>");
+    $stats_blocked.find(".p6").html("<span>" + p6.blocked + "</span>");
     // Healed
     $stats_healed.find(".p1").html("<span>" + p1.healed + "</span>");
     $stats_healed.find(".p2").html("<span>" + p2.healed + "</span>");
     $stats_healed.find(".p3").html("<span>" + p3.healed + "</span>");
     $stats_healed.find(".p4").html("<span>" + p4.healed + "</span>");
     $stats_healed.find(".p5").html("<span>" + p5.healed + "</span>");
+    $stats_healed.find(".p6").html("<span>" + p6.healed + "</span>");
     // Damage Done
     $stats_damage.find(".p1").html("<span>" + p1.damagedone + "</span>");
     $stats_damage.find(".p2").html("<span>" + p2.damagedone + "</span>");
     $stats_damage.find(".p3").html("<span>" + p3.damagedone + "</span>");
     $stats_damage.find(".p4").html("<span>" + p4.damagedone + "</span>");
     $stats_damage.find(".p5").html("<span>" + p5.damagedone + "</span>");
+    $stats_damage.find(".p6").html("<span>" + p6.damagedone + "</span>");
     // Damage Received
     $stats_received.find(".p1").html("<span>" + p1.damagereceived + "</span>");
     $stats_received.find(".p2").html("<span>" + p2.damagereceived + "</span>");
     $stats_received.find(".p3").html("<span>" + p3.damagereceived + "</span>");
     $stats_received.find(".p4").html("<span>" + p4.damagereceived + "</span>");
     $stats_received.find(".p5").html("<span>" + p5.damagereceived + "</span>");
+    $stats_received.find(".p6").html("<span>" + p6.damagereceived + "</span>");
     // Kills Made
     $stats_kills.find(".p1").html("<span>" + p1.kills + "</span>");
     $stats_kills.find(".p2").html("<span>" + p2.kills + "</span>");
     $stats_kills.find(".p3").html("<span>" + p3.kills + "</span>");
     $stats_kills.find(".p4").html("<span>" + p4.kills + "</span>");
     $stats_kills.find(".p5").html("<span>" + p5.kills + "</span>");
+    $stats_kills.find(".p6").html("<span>" + p6.kills + "</span>");
     // Times Downed
     $stats_downs.find(".p1").html("<span>" + p1.downs + "</span>");
     $stats_downs.find(".p2").html("<span>" + p2.downs + "</span>");
     $stats_downs.find(".p3").html("<span>" + p3.downs + "</span>");
     $stats_downs.find(".p4").html("<span>" + p4.downs + "</span>");
     $stats_downs.find(".p5").html("<span>" + p5.downs + "</span>");
+    $stats_downs.find(".p6").html("<span>" + p6.downs + "</span>");
     // Deaths
     $stats_deaths.find(".p1").html("<span>" + p1.deaths + "</span>");
     $stats_deaths.find(".p2").html("<span>" + p2.deaths + "</span>");
     $stats_deaths.find(".p3").html("<span>" + p3.deaths + "</span>");
     $stats_deaths.find(".p4").html("<span>" + p4.deaths + "</span>");
     $stats_deaths.find(".p5").html("<span>" + p5.deaths + "</span>");
+    $stats_deaths.find(".p6").html("<span>" + p6.deaths + "</span>");
     // Roll20
     $stats_roll20.find(".p1").html("<span>" + p1.roll20 + "</span>");
     $stats_roll20.find(".p2").html("<span>" + p2.roll20 + "</span>");
     $stats_roll20.find(".p3").html("<span>" + p3.roll20 + "</span>");
     $stats_roll20.find(".p4").html("<span>" + p4.roll20 + "</span>");
     $stats_roll20.find(".p5").html("<span>" + p5.roll20 + "</span>");
+    $stats_roll20.find(".p6").html("<span>" + p6.roll20 + "</span>");
     // Roll1
     $stats_roll1.find(".p1").html("<span>" + p1.roll1 + "</span>");
     $stats_roll1.find(".p2").html("<span>" + p2.roll1 + "</span>");
     $stats_roll1.find(".p3").html("<span>" + p3.roll1 + "</span>");
     $stats_roll1.find(".p4").html("<span>" + p4.roll1 + "</span>");
     $stats_roll1.find(".p5").html("<span>" + p5.roll1 + "</span>");
+    $stats_roll1.find(".p6").html("<span>" + p6.roll1 + "</span>");
 
     calculateMaxes();
     scale();
@@ -293,6 +309,30 @@
         "roll20" : data.player5.roll20,
         "roll1" : data.player5.roll1
       };
+      player6 = {
+        "name"  : data.player6.name,
+        "level" : data.player6.level,
+        "class" : data.player6.class,
+        "image" : data.player6.image,
+        "health"  : data.player6.health,
+        "maxhealth" : data.player6.maxhealth,
+        "money" : data.player6.money,
+        "initiative" : data.player6.initiative,
+        "spellslots" : data.player6.spellslots,
+        "attacks" : data.player6.attacks,
+        "spells" : data.player6.spells,
+        "hits" : data.player6.hits,
+        "misses" : data.player6.misses,
+        "blocked" : data.player6.blocked,
+        "healed" : data.player6.healed,
+        "damagedone" : data.player6.damagedone,
+        "damagereceived" : data.player6.damagereceived,
+        "kills" : data.player6.kills,
+        "downs" : data.player6.downs,
+        "deaths" : data.player6.deaths,
+        "roll20" : data.player6.roll20,
+        "roll1" : data.player6.roll1
+      };
     }).done(function(){
       var first = setInterval(step1, 1000);
       var sec = setInterval(step2, 1500);
@@ -305,7 +345,7 @@
 
       function step2() {
         $(".stat").addClass("show");
-        updateStats(player1, player2, player3, player4, player5);
+        updateStats(player1, player2, player3, player4, player5, player6);
       }
     });
   }

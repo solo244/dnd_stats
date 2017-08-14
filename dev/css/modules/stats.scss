@@ -11,9 +11,17 @@ h1 {
 }
 
 .stats {
-  padding: 50px;
+  padding: 10px;
   max-width: 1600px;
   margin: 0 auto;
+
+  @media screen and (min-width: 760px) {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 30px;
+  }
 
   .stat {
     width: 98%;
@@ -55,8 +63,8 @@ h1 {
 
       .bars {
         float: left;
-        width: 16%;
-        margin: 2%;
+        width: 14%;
+        margin: 1.3%;
         height: 200px;
         text-align: center;
         background-color: $__grey;
@@ -83,6 +91,7 @@ h1 {
         .p3 { background-color: lighten($primary, 20%); }
         .p4 { background-color: lighten($green, 10%); }
         .p5 { background-color: lighten($red, 20%); }
+        .p6 { background-color: lighten($turqiose, 20%); }
       }
     }
 
